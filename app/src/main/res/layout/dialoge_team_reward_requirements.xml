@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="24dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/teamRankingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:strokeColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/glassy_action_card_bg"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/minInvestmentTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="8dp"
+                        android:text="Self Deposit"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <!-- Amount -->
+                    <TextView
+                        android:id="@+id/minInvestmentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center|top"
+                        android:text="$0.0/0.0"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/minInvestmentIndicator"
+                        android:layout_width="125dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginTop="26dp"
+                        android:max="50"
+                        android:progress="25"
+                        app:indicatorColor="@color/progress_red" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/collectRewardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/progress_blue"
+                android:text="Contact Us"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Flat banner container (no card look) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp">
+
+        <!-- Top-right chip/brand -->
+        <ImageView
+            android:id="@+id/iconToggle"
+            android:layout_width="44dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/card_chip"
+            app:tint="@android:color/white" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/walletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iconToggle"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@id/iconToggle"
+            android:text="Primary Wallet"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Balance label -->
+        <TextView
+            android:id="@+id/labelBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/walletName"
+            android:layout_alignStart="@id/walletName"
+            android:layout_marginTop="16dp"
+            android:text="Balance"
+            android:textColor="@color/white_80"
+            android:textSize="12sp" />
+
+        <!-- Big amount -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelBalance"
+            android:layout_alignStart="@id/labelBalance"
+            android:layout_marginTop="4dp"
+            android:includeFontPadding="false"
+            android:text="$0.00"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Thin divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvAmount"
+            android:layout_marginTop="16dp"
+            android:background="@color/white_20" />
+
+        <!-- ID label (moved under divider to avoid overlap) -->
+        <TextView
+            android:id="@+id/labelId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:text="ID"
+            android:textColor="@color/white_80"
+            android:textSize="12sp" />
+
+        <!-- ID value (next to labelId) -->
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/labelId"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/labelId"
+            android:alpha="0.95"
+            android:text="1234-5678"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</FrameLayout>
